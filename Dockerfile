@@ -8,5 +8,5 @@ RUN wget https://wordpress.org/latest.zip -P /var/www/html/
 RUN unzip /var/www/html/latest.zip -d /var/www/html/
 RUN rm -rf /etc/nginx/sites-enabled/default
 COPY default /etc/nginx/sites-available/
-RUN ln -s /etc/nginx/sites-available/site1.conf /etc/nginx/sites-enabled/
+RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 EXPOSE 80
