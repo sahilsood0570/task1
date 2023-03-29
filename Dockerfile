@@ -8,6 +8,7 @@ RUN unzip /var/www/html/latest.zip -d /var/www/html/
 RUN rm -rf /etc/nginx/sites-enabled/default
 COPY default /etc/nginx/sites-available/
 RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+RUN chmod +x script.sh
 EXPOSE 80
 ENTRYPOINT ./script.sh  
 
